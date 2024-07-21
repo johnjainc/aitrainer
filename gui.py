@@ -6,6 +6,7 @@ from gym2 import gym
 from pathlib import Path
 import tkinter as tk
 import pymongo
+import cred
 # from tkinter import *
 # Explicit imports to satisfy Flake8
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage,font,ttk
@@ -13,7 +14,7 @@ import google.generativeai as genai
 from datetime import datetime
  
 
-GOOGLE_API_KEY="AIzaSyCSc7mz3nIPxI7eLCfTOlEiUyRnXoGic7Q"
+GOOGLE_API_KEY=cred.api_key
 
 genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel('gemini-pro')
